@@ -5,30 +5,29 @@
 </template>
 
 <script>
-import GaugeChart from './components/GaugeChart.vue'
+import GaugeChart from "./components/GaugeChart.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    GaugeChart
+    GaugeChart,
   },
-  data(){
+  data() {
     return {
-      num: 0
+      num: 0,
     };
   },
-  mounted(){
+  mounted() {
     setInterval(() => {
       this.num = Math.round(Math.random() * 100);
     }, 3000);
-
-  }
-}
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
